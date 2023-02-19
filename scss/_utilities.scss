@@ -21,3 +21,32 @@
     background-color: $colour;
     color: set-text-colour-based-on-background-colour($colour);
 }
+
+// margin and padding classes
+$spacing-numbers: (1,2,3,4,5);
+
+@each $space in $spacing-numbers {
+    .m-#{$space} {
+        margin: #{$space}rem;
+    }
+
+    .my-#{$space} {
+        margin: #{$space}rem 0;
+    }
+
+    .mx-#{$space} {
+        margin: 0 #{$space}rem;
+    }
+
+    .p-#{$space} {
+        padding: #{$space}rem;
+    }
+
+    .py-#{$space} {
+        padding: #{$space}rem 0;
+    }
+
+    .px-#{$space} {
+        padding: 0 #{$space}rem;
+    }
+}

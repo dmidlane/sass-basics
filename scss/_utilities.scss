@@ -1,0 +1,23 @@
+.container {
+    max-width: 1100px;
+    padding: 0 30px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+
+@function set-text-colour-based-on-background-colour($background-colour) {
+    @if (lightness($background-colour) > 70) {
+        @return #333;
+    } @else if (1 == 2) {
+        // just to show else if exists
+        @return red;
+    } @else {
+        @return #fff;
+    }
+}
+
+@mixin set-background-colour-and-appropriate-font-colour($colour) {
+    background-color: $colour;
+    color: set-text-colour-based-on-background-colour($colour);
+}

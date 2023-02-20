@@ -1,6 +1,5 @@
 @import 'config';
-@import 'utilities';
-@import 'buttons';
+// wherever you put the import statements is where they'll render, we have more at the bottom of style.scss
 
 * {
     box-sizing: border-box;
@@ -32,6 +31,7 @@ img {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 30px;
 
         img {
             width: 50%;
@@ -66,3 +66,8 @@ img {
         color: set-text-colour-based-on-background-colour($primary-color);
     }
 }
+
+// wherever you put the import statements is where they'll render
+@import 'mobile';
+@import 'utilities';
+@import 'buttons';
